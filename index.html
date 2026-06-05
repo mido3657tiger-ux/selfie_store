@@ -1,252 +1,73 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سيلفي ستور | الملك أبو عبد الله - المنصورة</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="سيلفي ستور — موبايلات جديد زيرو وكسر زيرو وإكسسوارات. شارع العباسي، المنصورة." />
+  <title>Selfie Store — سيلفي ستور</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-[#030712] text-slate-100 font-sans overflow-x-hidden selection:bg-amber-500 selection:text-black">
+<body>
 
-    <div class="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-600 text-black text-center py-2.5 px-4 text-xs md:text-sm font-black tracking-wide shadow-2xl relative z-50">
-        <i class="fas fa-fire animate-pulse"></i> عروض الصيف الكبرى في فرع شارع العباسي بالمنصورة - إدارة أبو عبد الله | خصومات وهدايا فورية على كل جهاز!
+  <!-- ══════════════════════════════ HEADER ══════════════════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <div class="logo">
+        <span class="logo-en">Selfie Store</span>
+        <span class="logo-ar">سيلفي ستور · المنصورة</span>
+      </div>
+
+      <button
+        id="theme-toggle"
+        class="theme-btn"
+        aria-label="تغيير المظهر"
+        title="Light / Dark"
+      >☾</button>
+
     </div>
+  </header>
 
-    <nav class="bg-[#0b0f19]/80 backdrop-blur-xl text-white p-4 sticky top-0 z-50 shadow-2xl border-b border-white/5">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="flex flex-col">
-                    <h1 class="text-2xl md:text-3xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">SELFIE STORE</h1>
-                    <span class="text-[10px] text-amber-500 font-black tracking-widest -mt-1"><i class="fas fa-crown"></i> إدارة: أبو عبد الله</span>
-                </div>
-            </div>
-            
-            <div class="hidden xl:flex space-x-8 space-x-reverse font-black text-xs uppercase tracking-wider text-gray-300">
-                <a href="#brands" class="hover:text-amber-400 transition-all duration-300 flex items-center gap-1.5"><i class="fas fa-tags text-amber-500"></i> الماركات</a>
-                <a href="#store-products" class="hover:text-amber-400 transition-all duration-300 flex items-center gap-1.5"><i class="fas fa-mobile-alt text-amber-500"></i> الأجهزة المتاحة</a>
-                <a href="#trade-in" class="hover:text-amber-400 transition-all duration-300 flex items-center gap-1.5"><i class="fas fa-sync-alt text-amber-500"></i> الشراء والاستبدال</a>
-                <a href="#maintenance-section" class="hover:text-amber-400 transition-all duration-300 flex items-center gap-1.5"><i class="fas fa-tools text-amber-500"></i> مركز الصيانة</a>
-                <a href="#installments" class="hover:text-amber-400 transition-all duration-300 flex items-center gap-1.5"><i class="fas fa-credit-card text-amber-500"></i> أنظمة التقسيط</a>
-            </div>
+  <!-- ══════════════════════════════ HERO ════════════════════════════════ -->
+  <section class="hero">
+    <p class="hero-eyebrow">شارع العباسي · المنصورة · إدارة أبو عبد الله</p>
+    <h1 class="hero-title">
+      كل الموبايلات<br /><strong>في مكان واحد.</strong>
+    </h1>
+    <p class="hero-sub">جديد زيرو، كسر زيرو، وإكسسوارات أصلية — بأفضل الأسعار.</p>
+  </section>
 
-            <div class="flex items-center gap-2">
-                <a href="tel:01030300355" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-black px-4 py-2.5 rounded-xl text-xs md:text-sm flex items-center gap-2 transition-all duration-300 shadow-xl shadow-amber-500/10">
-                    <i class="fas fa-phone-alt"></i> اتصل فوراً
-                </a>
-                <a href="https://wa.me/201030300355" target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-black px-4 py-2.5 rounded-xl text-xs md:text-sm flex items-center gap-2 transition-all duration-300 shadow-xl shadow-green-600/10">
-                    <i class="fab fa-whatsapp text-lg"></i> واتساب الإدارة
-                </a>
-            </div>
-        </div>
-    </nav>
+  <!-- ══════════════════════════════ FILTERS ═════════════════════════════ -->
+  <div class="filters-wrap">
+    <button class="filter-btn active-filter" data-filter="all">الكل</button>
+    <button class="filter-btn" data-filter="new">جديد زيرو</button>
+    <button class="filter-btn" data-filter="used">كسر زيرو</button>
+    <button class="filter-btn" data-filter="accessories">إكسسوارات</button>
+  </div>
 
-    <section class="relative min-h-[92vh] flex items-center justify-center bg-black text-white px-4 py-24 overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-10"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-black"></div>
-        
-        <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none animate-pulse"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-amber-600/5 rounded-full blur-[150px] pointer-events-none animate-pulse"></div>
+  <!-- ══════════════════════════════ GRID ════════════════════════════════ -->
+  <main class="grid-section">
+    <div id="products-grid"></div>
+  </main>
 
-        <div class="relative container mx-auto text-center z-10 max-w-5xl px-4 animate__animated animate__fadeIn">
-            <span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 px-6 py-2 rounded-full text-xs md:text-sm font-black uppercase tracking-widest mb-6 inline-block">
-                <i class="fas fa-map-marker-alt"></i> المنصورة - أكبر صرح في شارع العباسي
-            </span>
-            <h2 class="text-5xl md:text-8xl font-black my-6 leading-tight tracking-tighter">
-                صناعة الفخامة في عالم الهواتف <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">سيلفي ستور | أبو عبد الله</span>
-            </h2>
-            <p class="text-base md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-                لسنا مجرد محل تليفونات، نحن نضع المعايير. أجهزة زيرو، كسر زيرو دولي ومحلي مفحوصة حبة حبة، صيانة فورية بأحدث الأجهزة الفنية، وأنظمة استبدال وتسهيلات تقسيط تضرب التوكيلات الكبيرة في مقتل.
-            </p>
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="#store-products" class="bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 text-black font-black px-10 py-5 rounded-2xl hover:scale-105 transition-all duration-300 shadow-2xl shadow-amber-500/20 text-lg flex items-center gap-2">
-                    <i class="fas fa-shopping-bag"></i> تصفح صالة العرض
-                </a>
-                <a href="#trade-in" class="bg-white/5 text-white border border-white/10 font-black px-10 py-5 rounded-2xl hover:bg-white/10 transition-all duration-300 text-lg flex items-center gap-2">
-                    <i class="fas fa-sync-alt"></i> بدّل تليفونك القديم
-                </a>
-            </div>
-        </div>
-    </section>
+  <!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
+  <div class="divider"></div>
+  <footer class="site-footer">
+    <span class="footer-logo">Selfie Store</span>
+    <div class="footer-info">
+      <span>شارع العباسي، المنصورة</span>
+      <a href="https://wa.me/201030300355" target="_blank" rel="noopener noreferrer">
+        01030300355
+      </a>
+    </div>
+  </footer>
 
-    <section id="brands" class="container mx-auto py-16 px-4">
-        <div class="text-center mb-12">
-            <h3 class="text-2xl md:text-4xl font-black text-white">اختر براندك المفضل</h3>
-            <p class="text-gray-400 text-sm mt-2">اضغط على البراند لعرض الأجهزة المتاحة له في المحل فوراً</p>
-        </div>
-        <div class="flex flex-wrap justify-center gap-4 md:gap-6" id="brands-filter-container">
-            </div>
-    </section>
-
-    <section id="store-products" class="container mx-auto py-16 px-4">
-        <div class="flex flex-col md:flex-row justify-between items-center mb-16 border-b border-white/5 pb-6">
-            <div>
-                <h3 class="text-3xl md:text-5xl font-black text-white">الأجهزة المتاحة بالمحل الآن</h3>
-                <p class="text-gray-400 text-sm mt-2">تحديث فوري يومي للأسعار وحالة المخزون الفعلي في شارع العباسي</p>
-            </div>
-            <div class="mt-4 md:mt-0 text-amber-500 font-bold text-sm bg-amber-500/5 px-4 py-2 rounded-xl border border-amber-500/10">
-                <i class="fas fa-circle-notch animate-spin"></i> متصل ومحدث لايف
-            </div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="products-grid">
-            </div>
-    </section>
-
-    <section id="trade-in" class="bg-[#0b0f19] border-y border-white/5 py-24 px-4 relative">
-        <div class="container mx-auto max-w-6xl">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <span class="text-amber-500 font-black uppercase text-xs tracking-wider bg-amber-500/5 px-3 py-1 rounded-md border border-amber-500/10">سيستم الاستبدال الذكي</span>
-                    <h3 class="text-3xl md:text-5xl font-black text-white my-6">هات القديم.. واطلع بالجديد في 5 دقائق!</h3>
-                    <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
-                        في سيلفي ستور، بنقدر قيمة جهازك. مش هتبخس تليفونك القديم زي المحلات العادية، أبو عبد الله بيعملك أعلى تقييم فني وسعري عادل لجهازك في مصر، وبتدفع الفرق وتستلم تليفونك الجديد بضمان معتمد وفحص شامل.
-                    </p>
-                    <ul class="space-y-4 font-bold text-sm text-gray-300">
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500 text-lg"></i> تقييم فني فوري أمام عينك بدون فك السيريال.</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500 text-lg"></i> نقل بياناتك بالكامل من التليفون القديم للجديد مجاناً.</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500 text-lg"></i> بنشتري منك حتى لو العلبة مش موجودة (بشرط إثبات الملكية القانونية).</li>
-                    </ul>
-                    <div class="mt-10">
-                        <a href="https://wa.me/201030300355?text=أهلاً%20أبو%20عبد%20الله،%20عاوز%20أعمل%20استبدال%20لتليفوني%20القديم%20ومعرفة%20التقييم" target="_blank" class="bg-gradient-to-r from-amber-500 to-amber-600 text-black font-black px-8 py-4 rounded-xl text-base hover:scale-105 transition-all duration-300 inline-flex items-center gap-2">
-                            <i class="fas fa-calculator"></i> احسب قيمة جهازك القديم الآن
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-[#030712] p-8 rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl"></div>
-                    <h4 class="text-xl font-black mb-6 flex items-center gap-2 text-amber-400"><i class="fas fa-money-check-alt"></i> استعلام فوري عن البدل</h4>
-                    <form id="tradeInForm" class="space-y-4" onsubmit="sendTradeInRequest(event)">
-                        <div>
-                            <label class="block text-xs font-bold text-gray-400 mb-2">اسم جهازك الحالي بالكامل</label>
-                            <input type="text" id="oldPhoneName" placeholder="مثال: iPhone 13 Pro Max 256GB" class="w-full bg-[#0b0f19] border border-white/10 rounded-xl p-3.5 text-sm font-bold text-white focus:outline-none focus:border-amber-500 transition-all" required>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-400 mb-2">حالة البطارية ونسبة الخدوش</label>
-                            <input type="text" id="phoneCondition" placeholder="مثال: البطارية 85% - بدون أي خدوش أو فتح" class="w-full bg-[#0b0f19] border border-white/10 rounded-xl p-3.5 text-sm font-bold text-white focus:outline-none focus:border-amber-500 transition-all" required>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-400 mb-2">الجهاز اللي حابب تشتريه مكانه</label>
-                            <input type="text" id="targetPhoneName" placeholder="مثال: Samsung S24 Ultra" class="w-full bg-[#0b0f19] border border-white/10 rounded-xl p-3.5 text-sm font-bold text-white focus:outline-none focus:border-amber-500 transition-all" required>
-                        </div>
-                        <button type="submit" class="w-full bg-green-600 hover:bg-green-500 text-white font-black p-4 rounded-xl transition-all duration-300 shadow-lg shadow-green-600/20 text-sm flex items-center justify-center gap-2">
-                            <i class="fab fa-whatsapp text-lg"></i> إرسال طلب البدل المباشر لأبو عبد الله
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="maintenance-section" class="container mx-auto py-24 px-4">
-        <div class="max-w-4xl mx-auto text-center mb-16">
-            <span class="text-amber-500 font-black text-xs uppercase tracking-widest bg-amber-500/5 px-4 py-1.5 rounded-full border border-amber-500/10">عالم الهاردوير والسوفتوير</span>
-            <h3 class="text-3xl md:text-5xl font-black text-white mt-4">قسم الصيانة المعتمد لـ سيلفي ستور</h3>
-            <p class="text-gray-400 text-sm md:text-base mt-4 max-w-xl mx-auto">
-                بنصلح اللي غيرنا بيقولك عليه مستحيل. تغيير باغات بالليزر، حل مشاكل البوردة، وتغيير بطاريات وشاشات أصلية 100% مع تفعيل مقاومة المياه مجدداً.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto">
-            <div class="bg-[#0b0f19] p-8 rounded-3xl border border-white/5 flex flex-col justify-between">
-                <div>
-                    <h4 class="text-xl font-black mb-4 text-amber-400"><i class="fas fa-tools"></i> أنواع الصيانة المتوفرة</h4>
-                    <div class="space-y-4 text-sm font-bold text-gray-300 mt-6">
-                        <div class="flex items-start gap-3 bg-[#030712] p-4 rounded-xl border border-white/5">
-                            <i class="fas fa-bolt text-amber-500 mt-1"></i>
-                            <div>
-                                <h5>تغيير الباغات الأصلية (Glass Repair)</h5>
-                                <p class="text-xs text-gray-500 font-medium mt-1">بتحتفظ بشاشتك الأصلية وبنغير الزجاج الخارجي المكسور فقط بأحدث مكابس ليزر.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3 bg-[#030712] p-4 rounded-xl border border-white/5">
-                            <i class="fas fa-microchip text-amber-500 mt-1"></i>
-                            <div>
-                                <h5>صيانة البوردة والأعطال المعقدة (Micro-Soldering)</h5>
-                                <p class="text-xs text-gray-500 font-medium mt-1">حل مشاكل الشحن، الشبكة، الباور، والمياه تحت الميكروسكوب بأعلى كفاءة.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="https://wa.me/201030300355?text=أهلاً%20أبو%20عبد%20الله،%20عندي%20مشكلة%20فنية%20في%20تليفوني%20وعايز%20استشارة%20صيانة" target="_blank" class="w-full bg-[#030712] border border-white/10 hover:border-amber-500/30 text-white font-black p-4 rounded-xl text-center text-sm transition-all mt-6 flex items-center justify-center gap-2">
-                    <i class="fas fa-headset text-amber-500"></i> استشارة فنية مجانية مع فني الصيانة
-                </a>
-            </div>
-
-            <div class="bg-[#0b0f19] p-8 rounded-3xl border border-white/5 shadow-2xl">
-                <h4 class="text-xl font-black mb-6 flex items-center gap-2 text-amber-400"><i class="fas fa-calendar-check"></i> احجز دورك لتصليح جهازك فوراً</h4>
-                <form id="maintenanceForm" class="space-y-4" onsubmit="sendMaintenanceRequest(event)">
-                    <div>
-                        <label class="block text-xs font-bold text-gray-400 mb-2">نوع الجهاز المصاب</label>
-                        <input type="text" id="repairPhone" placeholder="مثال: iPhone 12 Pro" class="w-full bg-[#030712] border border-white/10 rounded-xl p-3.5 text-sm font-bold text-white focus:outline-none focus:border-amber-500 transition-all" required>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-gray-400 mb-2">وصف العطل بالتفصيل</label>
-                        <textarea id="repairProblem" rows="3" placeholder="مثال: الشاشة مكسورة بس اللمس شغال والبيانات ظاهرة..." class="w-full bg-[#030712] border border-white/10 rounded-xl p-3.5 text-sm font-bold text-white focus:outline-none focus:border-amber-500 transition-all" required></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-black font-black p-4 rounded-xl transition-all duration-300 shadow-lg shadow-amber-500/10 text-sm flex items-center justify-center gap-2">
-                        <i class="fas fa-wrench"></i> تأكيد حجز الصيانة عبر واتساب الإدارة
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <section id="installments" class="bg-gradient-to-b from-[#030712] to-[#0b0f19] border-t border-white/5 py-24 px-4 text-center">
-        <div class="container mx-auto max-w-4xl">
-            <i class="fas fa-credit-card text-5xl text-amber-500 mb-6"></i>
-            <h3 class="text-3xl md:text-5xl font-black text-white mb-6">قسّط جهازك بالطريقة اللي تريحك</h3>
-            <p class="text-gray-400 text-sm md:text-base max-w-xl mx-auto mb-12">
-                مفيش حاجة صعبة في سيلفي ستور. بنتعامل مع كبرى شركات التقسيط المباشر والائتماني في مصر عشان نسهل عليك تطلع بجهاز أحلامك فورا.
-            </p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 font-black text-xs md:text-sm text-white">
-                <div class="p-4 bg-black/40 rounded-2xl border border-white/5 hover:border-amber-500/20 transition-all"><i class="fas fa-check text-green-500 mb-2 block"></i> تقسيط عبر valU</div>
-                <div class="p-4 bg-black/40 rounded-2xl border border-white/5 hover:border-amber-500/20 transition-all"><i class="fas fa-check text-green-500 mb-2 block"></i> تقسيط عبر Suhoola</div>
-                <div class="p-4 bg-black/40 rounded-2xl border border-white/5 hover:border-amber-500/20 transition-all"><i class="fas fa-check text-green-500 mb-2 block"></i> أمان وفوري للتقسيط</div>
-                <div class="p-4 bg-black/40 rounded-2xl border border-white/5 hover:border-amber-500/20 transition-all"><i class="fas fa-check text-green-500 mb-2 block"></i> فيزا مشتريات جميع البنوك</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container mx-auto py-20 px-4 text-center">
-        <div class="max-w-3xl mx-auto bg-gradient-to-b from-[#0b0f19] to-black p-10 md:p-16 rounded-[35px] border border-white/5 shadow-2xl relative overflow-hidden">
-            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=800&q=80')] bg-cover bg-center opacity-5"></div>
-            <i class="fas fa-store-alt text-6xl text-amber-500 mb-6 relative z-10"></i>
-            <h3 class="text-3xl md:text-5xl font-black mb-4 relative z-10 text-white">تشرفنا بالزيارة في صالة العرض</h3>
-            <p class="text-gray-300 mb-8 font-bold relative z-10 text-base md:text-lg">
-                <i class="fas fa-map-marked-alt text-amber-500 animate-bounce"></i> المنصورة - شارع العباسي الرئيسي (قلب سوق الهواتف بالدقهلية)
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8 relative z-10">
-                <a href="tel:01030300355" class="bg-slate-900 hover:bg-slate-800 border border-white/10 text-white font-black px-8 py-5 rounded-2xl transition-all flex items-center justify-center gap-3 text-xl shadow-2xl">
-                    <i class="fas fa-phone-alt text-amber-500 animate-pulse"></i> 01030300355
-                </a>
-                <a href="https://wa.me/201030300355" target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-black px-8 py-5 rounded-2xl transition-all flex items-center justify-center gap-3 text-xl shadow-2xl shadow-green-600/10">
-                    <i class="fab fa-whatsapp text-2xl"></i> شات واتساب مباشر
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-black py-16 px-4 text-center border-t border-white/5 relative z-10">
-        <div class="container mx-auto max-w-5xl flex flex-col md:flex-row justify-between items-center gap-6 text-gray-500 text-xs font-bold border-b border-white/5 pb-8 mb-8">
-            <div class="text-right">
-                <p class="text-amber-400 font-black text-2xl tracking-widest mb-1">SELFIE STORE</p>
-                <p class="text-gray-400">إدارة البراند لـ أبو عبد الله - شارع العباسي بالمنصورة</p>
-            </div>
-            <div class="flex gap-6 text-gray-400">
-                <a href="#brands" class="hover:text-amber-400 transition">الماركات</a>
-                <a href="#store-products" class="hover:text-amber-400 transition">الأجهزة</a>
-                <a href="#trade-in" class="hover:text-amber-400 transition">الاستبدال</a>
-                <a href="#maintenance-section" class="hover:text-amber-400 transition">الصيانة</a>
-            </div>
-        </div>
-        <p class="text-gray-600 text-xs font-bold">جميع الحقوق محفوظة © 2026 | سيلفي ستور المنصورة</p>
-        <p class="text-amber-600/30 text-[9px] uppercase tracking-widest font-black mt-2">Engineered, Automated & Optimized by Tiger-X</p>
-    </footer>
-
-    <script src="app.js"></script>
+  <!-- App Script -->
+  <script src="app.js"></script>
 </body>
 </html>

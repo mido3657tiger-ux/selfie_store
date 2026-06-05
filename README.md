@@ -1,6 +1,6 @@
-# Selfie Store — سيلفي ستور
+# Selfie Store v2 — Dark Luxury Edition
 
-موقع احترافي لمحل موبايلات بتصميم Minimalist أبيض/أسود مع دعم Light & Dark mode.
+موقع ضخم لسيلفي ستور — تصميم Dark Luxury، ألوان نيون، أنيميشن كامل، 8 ماركات + إكسسوارات.
 
 ---
 
@@ -8,70 +8,47 @@
 
 | الملف | الوصف |
 |-------|-------|
-| `index.html` | الهيكل الكامل للموقع |
-| `style.css` | كل الأنماط + متغيرات Light/Dark |
-| `app.js` | داتا المنتجات + منطق الفلترة + تبديل الثيم |
+| `index.html` | هيكل الموقع الكامل — 8 أقسام + hero + footer |
+| `style.css` | كل التصميم والأنيميشن والألوان |
+| `app.js` | داتا المنتجات + كل الـ logic |
 
 ---
 
-## إضافة أو تعديل منتج
+## إضافة/تعديل منتج
 
-افتح `app.js` وعدّل على مصفوفة `products`:
+افتح `app.js` وابحث عن id القسم المطلوب مثلاً `apple-grid` وأضف object جديد:
 
 ```js
-{
-  id: 13,                          // رقم فريد
-  category: "new",                 // new | used | accessories
-  name: "iPhone 16 Pro",
-  storage: "256 GB",
-  condition: "جديد زيرو",          // نص الـ badge
-  price: 68000,                    // بالجنيه بدون فواصل
-  image: "https://...",            // رابط صورة مباشر
-},
+{ name:"iPhone 17 Pro", spec:"256GB | Titanium", badge:"new", img:"رابط الصورة" },
 ```
 
-### قيم `category`
+### قيم `badge`
 
-| القيمة | الفلتر |
+| القيمة | المعنى |
 |--------|--------|
 | `new` | جديد زيرو |
 | `used` | كسر زيرو |
-| `accessories` | إكسسوارات |
+| `acc` | إكسسوار |
 
 ---
 
 ## رقم الواتساب
 
-في أعلى `app.js`:
-
+أول سطر في `app.js`:
 ```js
-const WHATSAPP_NUMBER = "201030300355";
+const WA = "201030300355";
 ```
-
-غيّره مباشرةً إذا تغيّر الرقم.
 
 ---
 
-## النشر على GitHub Pages
+## نشر على GitHub Pages
 
 ```bash
 git init
 git add .
-git commit -m "init: selfie store"
+git commit -m "init: selfie store v2"
 git branch -M main
-git remote add origin https://github.com/<username>/<repo>.git
+git remote add origin https://github.com/mido3657tiger-ux/selfie-store.git
 git push -u origin main
 ```
-
-ثم من إعدادات الـ repo:
-**Settings → Pages → Branch: main → / (root) → Save**
-
----
-
-## التقنيات
-
-- HTML5 / CSS3 (CSS Variables)
-- Tailwind CSS v3 (CDN)
-- Vanilla JavaScript (ES6+)
-- Google Fonts: DM Sans + Noto Kufi Arabic
-- WhatsApp API (`wa.me`)
+ثم: **Settings → Pages → Branch: main → Save**
